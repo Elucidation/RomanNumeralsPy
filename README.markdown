@@ -1,5 +1,19 @@
 Basic implementation of functions to convert integers to roman numerals and back via roman() and unroman() respectively.
 
+Roman Numerals used the summed value of letters to represent a number.
+
+```
+Symbol	Value
+I		1
+V		5
+X		10
+L		50
+C		100
+D		500
+M		1,000
+```
+
+
 Example output when running test cases through it:
 ```
 0 :  : 0
