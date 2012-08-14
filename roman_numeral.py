@@ -29,6 +29,8 @@ def roman(num):
         ex. 1903 -> 'MCMIII'
         For numbers > 1000, string size increases linearly with every 1000s (add an M)s
     """
+    if num<0 or type(num)!=int:
+        return None
     return ''.join([conv(int(digit),i) for i,digit in enumerate(str(num)[::-1])][::-1])
 
 
@@ -36,6 +38,8 @@ def unroman(rom):
     """ Convert string Roman Numberals back to integer number
         ex. 'MCMIII' -> 1903
     """
+    if rom == None:
+        return None
     R = dict( zip( 'IVXLCDM', [1,5,10,50,100,500,1000] ) )
     lastmax = 0
     total = 0
@@ -49,6 +53,6 @@ def unroman(rom):
         
 
 #tests = [1,2,3,4,5,6,7,8,9,10, 1910,1954,1990, 2012, 2013, 391349,1000000]
-tests = [x for x in range(0,20)] + [x**2 for x in range(5,60)]
+tests = [x for x in range(-1,20)] + [x**2 for x in range(5,60)]
 for test in tests:
     print test,":",roman(test),':',unroman(roman(test))
