@@ -28,6 +28,11 @@ def roman(num):
     """ Convert integer number to string containing Roman Numeral value
         ex. 1903 -> 'MCMIII'
         For numbers > 1000, string size increases linearly with every 1000s (add an M)s
+        
+        Negative numbers are dealt with as the roman string for the positive value with a '-' sign placed in front
+        ex. -1903 -> '-MCMIII'
+
+        None is returned for non-integers 
     """
     s = ""
     if type(num)!=int:
@@ -41,7 +46,8 @@ def roman(num):
 
 def unroman(rom):
     """ Convert string Roman Numberals back to integer number
-        ex. 'MCMIII' -> 1903
+        ex. 'MCMIII' -> 1903, '-MCMIII' -> -1903
+        None is returned for a None input
     """
     if rom == None:
         return None
