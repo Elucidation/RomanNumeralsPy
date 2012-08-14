@@ -2,7 +2,7 @@ Basic implementation of functions to convert integers to roman numerals and back
 
 Roman Numerals used the summed value of letters to represent a number.
 
-```
+```	
 Symbol	Value
 I		1
 V		5
@@ -16,80 +16,39 @@ M		1,000
 
 Example output when running test cases through it:
 ```
-0 :  : 0
-1 : I : 1
-2 : II : 2
-3 : III : 3
-4 : IV : 4
-5 : V : 5
-6 : VI : 6
-7 : VII : 7
-8 : IIX : 8
-9 : IX : 9
-10 : X : 10
-11 : XI : 11
-12 : XII : 12
-13 : XIII : 13
-14 : XIV : 14
-15 : XV : 15
-16 : XVI : 16
-17 : XVII : 17
-18 : XIIX : 18
-19 : XIX : 19
-25 : XXV : 25
-36 : XXXVI : 36
-49 : XLIX : 49
-64 : LXIV : 64
-81 : XXCI : 81
-100 : C : 100
-121 : CXXI : 121
-144 : CXLIV : 144
-169 : CLXIX : 169
-196 : CXCVI : 196
-225 : CCXXV : 225
-256 : CCLVI : 256
-289 : CCXXCIX : 289
-324 : CCCXXIV : 324
-361 : CCCLXI : 361
-400 : CD : 400
-441 : CDXLI : 441
-484 : CDXXCIV : 484
-529 : DXXIX : 529
-576 : DLXXVI : 576
-625 : DCXXV : 625
-676 : DCLXXVI : 676
-729 : DCCXXIX : 729
-784 : DCCXXCIV : 784
-841 : CCMXLI : 841
-900 : CM : 900
-961 : CMLXI : 961
-1024 : MXXIV : 1024
-1089 : MXXCIX : 1089
-1156 : MCLVI : 1156
-1225 : MCCXXV : 1225
-1296 : MCCXCVI : 1296
-1369 : MCCCLXIX : 1369
-1444 : MCDXLIV : 1444
-1521 : MDXXI : 1521
-1600 : MDC : 1600
-1681 : MDCXXCI : 1681
-1764 : MDCCLXIV : 1764
-1849 : MCCMXLIX : 1849
-1936 : MCMXXXVI : 1936
-2025 : MMXXV : 2025
-2116 : MMCXVI : 2116
-2209 : MMCCIX : 2209
-2304 : MMCCCIV : 2304
-2401 : MMCDI : 2401
-2500 : MMD : 2500
-2601 : MMDCI : 2601
-2704 : MMDCCIV : 2704
-2809 : MMCCMIX : 2809
-2916 : MMCMXVI : 2916
-3025 : MMMXXV : 3025
-3136 : MMMCXXXVI : 3136
-3249 : MMMCCXLIX : 3249
-3364 : MMMCCCLXIV : 3364
-3481 : MMMCDXXCI : 3481
+	X : roman(X)   :  unroman(roman(x))
+-------------------------------------------
+   -5 : -V         :    -5
+   -4 : -IV        :    -4
+   -3 : -III       :    -3
+   -2 : -II        :    -2
+   -1 : -I         :    -1
+    0 :            :     0
+    1 : I          :     1
+    2 : II         :     2
+    3 : III        :     3
+    4 : IV         :     4
+    5 : V          :     5
+    6 : VI         :     6
+    7 : VII        :     7
+    8 : IIX        :     8
+    9 : IX         :     9
+   10 : X          :    10
+   11 : XI         :    11
+   12 : XII        :    12
+   13 : XIII       :    13
+   14 : XIV        :    14
+   15 : XV         :    15
+   16 : XVI        :    16
+   17 : XVII       :    17
+   18 : XIIX       :    18
+   19 : XIX        :    19
+   81 : XXCI       :    81
+  256 : CCLVI      :   256
+  625 : DCXXV      :   625
+ 1296 : MCCXCVI    :  1296
+ 2401 : MMCDI      :  2401
+ 4096 : MMMMXCVI   :  4096
+ 6561 : MMMMMMDLXI :  6561
 [Finished in 0.1s]
 ```
